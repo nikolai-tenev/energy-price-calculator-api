@@ -24,6 +24,10 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping("/api/price-calculations")
+@CrossOrigin(
+        origins = {"http://localhost", "http://localhost:3000"},
+        methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.OPTIONS}
+)
 public class PriceCalculationController {
 
     private final QuarterlyPriceRepository quarterlyPriceRepository;
